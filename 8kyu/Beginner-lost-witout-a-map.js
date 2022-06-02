@@ -1,5 +1,3 @@
-
-
 // Given an array of integers, return a new array with each value doubled.
 
 // For example:
@@ -8,12 +6,8 @@
 
 
 
-
-
-
-
 // MY SOLUTION
 
 function maps(x){
-    return x.map(n => n * 2)
-   }
+    return x.map(n => n * 2);
+  }
