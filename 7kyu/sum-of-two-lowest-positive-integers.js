@@ -11,9 +11,25 @@
 
 
 
-// MY SOLUTION
+//MY SOLUTION
 
 function sumTwoSmallestNumbers(numbers) {  
     //Code here
    return numbers.sort((a,b)=> a - b).splice(0,2).reduce((a,c)=> a + c, 0)
   }
+
+// ALTERNATE solution
+function sumTwoSmallestNumbers(numbers){
+    let arr = numbers.sort((a,b) => a - b)
+    return arr[0] + arr[1]
+}
+
+//More alternate solutions
+
+function sumTwoSmallestNumbers(numbers){
+    let firstNum = Math.min(...numbers)
+    numbers.splice(numbers.indexOf(firstNum),1)
+    let secondNum = Math.min(...numbers)
+    return firstNum + secondNum
+}
+sumTwoSmallestNumbers([15,28,4,2,43])
